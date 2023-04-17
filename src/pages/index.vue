@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useAuth0 } from '@auth0/auth0-vue'
 
-const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0()
+const { isAuthenticated, loginWithRedirect } = useAuth0()
 
 
 useTitle('Burpy Suite')
@@ -46,7 +46,7 @@ for (const record of response.value.records) {
             <div v-if="state.isFetching" col start>
             <Loading />
             </div>
-                                    <section gap-2 v-else-if="response.geo.city" col center>
+                                            <section gap-2 v-if="response" col center>
                 <br />
                     <h1 text-xl font-sans underline><strong>Geolocation</strong></h1>
                 <p text-body><strong>City:</strong> {{ response.geo.city }}</p>
