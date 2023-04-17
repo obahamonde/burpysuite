@@ -40,7 +40,7 @@ for (const record of response.value.records) {
 <button title="Bur Py Suite">
 <img src="/favicon.png" x8 hover:cp  alt="logo" class="w-1/2" />
 </button>
-            <div v-if="isAuthenticated" col center>
+                <div v-if="!isAuthenticated" col center>
             <input type="text" v-model="domain" class="input"
             @keyup.enter="checkDomain()" />
             <div v-if="state.isFetching" col start>
