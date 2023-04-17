@@ -46,7 +46,7 @@ for (const record of response.value.records) {
             <div v-if="state.isFetching" col start>
             <Loading />
             </div>
-                <section gap-2 v-if="response" col center>
+                        <section gap-2 v-else-if="response.geo" col center>
                 <br />
                     <h1 text-xl font-sans underline><strong>Geolocation</strong></h1>
                 <p text-body><strong>City:</strong> {{ response.geo.city }}</p>
