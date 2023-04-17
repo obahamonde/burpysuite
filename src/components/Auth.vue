@@ -50,7 +50,7 @@
     const token = await getAccessTokenSilently();
     setState({isFetching: true})
     const { data } = await useFetch(
-        `http://127.0.0.1:8000/api/auth/${token}`
+      `/api/auth/${token}`
     ).json()
     const user = unref(data);
     setState({isFetching: false})
