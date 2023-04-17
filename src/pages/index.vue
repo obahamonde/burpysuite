@@ -58,7 +58,7 @@ return
                                         <br />
                                         </code>
                                         <h1 text-xl font-sans underline><strong>DNS Records</strong></h1>
-                                        <div class="grid3 mb-12">
+                                            <div class="grid2 mb-12">
                                             <div class="v-card" v-for="record in records" :key="record.domain">
                                         <p class="v-card-text"><strong>Domain:</strong> {{ record.domain }}</p>
                                         <p class="v-card-text"><strong>Type:</strong> {{ record.type_ }}</p>
